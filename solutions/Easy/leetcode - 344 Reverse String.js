@@ -6,7 +6,7 @@ var reverseString = function(s) {
     let j = s.length; 
     for(let i = 0; i < s.length / 2; i++){
         j--;
-        temp_char = s[i];
+        let temp_char = s[i];
         s[i] = s[j];
         s[j] = temp_char;
     }
