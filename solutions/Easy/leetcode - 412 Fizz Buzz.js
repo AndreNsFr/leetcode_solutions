@@ -1,16 +1,26 @@
 /**
- * @param {number[]} nums
- * @return {number}
+ * @param {number} n
+ * @return {string[]}
  */
-var removeDuplicates = function(nums) {
+var fizzBuzz = function(n) {
+    let result = [];
+    for(let i = 0; i < n; i++){
+        let tempString = "";
+        if(((i + 1) % 3) == 0){
+            tempString += "Fizz";
+        }
+        if(((i + 1) % 5) == 0){
+            tempString += "Buzz";
+        }
 
-    let j = 0; 
-    for(let e = 0; e < nums.length; e++){
-        if(nums[e] != nums[j]){
-            j++; 
-            nums[j] = nums[e];
-        }    
+        if(tempString != ""){
+            result.push(tempString);
+        }else{
+            result.push((i + 1).toString());
+        }
+
     }
 
-    return j + 1;
+    return result;
+
 };
